@@ -1,0 +1,115 @@
+/* Reseta alguns estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fonte alterada para Arial */
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+    padding: 20px; /* Adiciona um pequeno espaçamento nas laterais */
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 15px; /* Bordas mais arredondadas */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Sombras mais sutis e largas */
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s ease; /* Transição suave para o movimento */
+}
+
+.container:hover {
+    transform: scale(1.02); /* Efeito de aumento suave quando o mouse passa */
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #007BFF;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+header h1:hover {
+    color: #0056b3; /* Muda a cor ao passar o mouse */
+    transform: translateY(-5px); /* Leve movimento para cima */
+}
+
+#texto-inicial {
+    margin-top: 15px;
+    color: #666;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#texto-inicial:hover {
+    color: #007BFF;
+    transform: translateY(-3px); /* Pequeno movimento para cima */
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os botões */
+    gap: 15px; /* Espaçamento entre os botões */
+}
+
+.btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    text-transform: uppercase; /* Transforma o texto para maiúsculo */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px); /* Movimento de elevação */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+}
+
+.btn:active {
+    transform: translateY(2px); /* Efeito de pressionamento */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Menor sombra ao pressionar */
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para dispositivos móveis */
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 90%; /* Largura maior em telas pequenas */
+        max-width: 500px;
+    }
+
+    header h1 {
+        font-size: 2em; /* Tamanho menor em telas pequenas */
+    }
+
+    #texto-inicial {
+        font-size: 1em; /* Ajuste no tamanho da fonte */
+    }
+
+    .btn {
+        font-size: 1em; /* Tamanho do texto dos botões reduzido em telas pequenas */
+        padding: 10px 25px; /* Menos espaçamento nos botões */
+    }
+}
